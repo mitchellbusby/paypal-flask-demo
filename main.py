@@ -7,15 +7,15 @@ import paypalrestsdk
 #Configure the REST SDK
 paypalrestsdk.configure({
 	"mode": "sandbox",
-	"client_id": "AQkquBDf1zctJOWGKWUEtKXm6qVhueUEMvXO_-MCI4DQQ4-LWvkDLIN2fGsd",
-	"client_secret":"EL1tVxAjhT7cJimnz5-Nsx9k2reTKSVfErNQF-CmrwJgxRtylkGTKlU4RvrX"
+	"client_id": "your_client_id_here",
+	"client_secret":"your_client_secret_here"
 	});
 
 
 @app.route("/")
 def index():
 	return """
-	<a href="%s">Pay with paypal</a>
+	<a href="%s">Pay with PayPal</a>
 	""" % (url_for('paypal_approval'))
 
 @app.route("/paypal/approve")
